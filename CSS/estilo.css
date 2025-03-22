@@ -1,0 +1,246 @@
+/* Container para centralizar todo o conteúdo */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+    flex-direction: column;
+    background-image: url("../imagens/icon_banco.png");
+
+}
+
+/* Formulário e Tabela */
+form,
+table {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px 0;
+}
+
+/* Centraliza o título e ajusta o tamanho */
+h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Estiliza a tabela e o corpo */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px;
+    background: #dbf0fc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho da tabela */
+thead {
+    background: rgb(252, 105, 0);
+    color: white;
+    text-align: left;
+}
+
+/* Linhas da tabela */
+tr {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Células da tabela */
+th,
+td {
+    padding: 12px;
+    text-align: center;
+}
+
+/* Alternar cores das linhas */
+tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* Estilização das entradas e saídas */
+td:nth-child(3) {
+    font-weight: bold;
+}
+
+td:nth-child(3)[style*="green"] {
+    color: green;
+}
+
+td:nth-child(3)[style*="red"] {
+    color: red;
+}
+
+/* Formulário */
+form {
+    width: 100%;
+}
+
+/* Estiliza todos os botões e campos de entrada para ocupar 100% da largura */
+input[type="text"],
+input[type="number"],
+button {
+    width: 100%;
+    padding: 12px;
+    margin: 6px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #fc6800;
+    outline: none;
+}
+
+/* Botões de Entrada, Saída e Adicionar */
+#inEntrada,
+#inSaida,
+#inAdicionar {
+    background: rgb(252, 104, 0);
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Botões de Entrada e Saída lado a lado */
+#formButtons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Botão de Entrada */
+#inEntrada {
+    background: #00b300;
+    /* Verde para entrada */
+    flex: 1;
+    /* Faz o botão ocupar 50% */
+}
+
+/* Botão de Saída */
+#inSaida {
+    background: #cc0000;
+    /* Vermelho para saída */
+    flex: 1;
+    /* Faz o botão ocupar 50% */
+}
+
+/* Mudança de cor ao passar o mouse nos botões de Entrada e Saída */
+#inEntrada:hover {
+    background-color: #99f999;
+    /* Cor mais escura para Entrada */
+}
+
+#inSaida:hover {
+    background-color: #f96060;
+    /* Cor mais escura para Saída */
+}
+
+/* Botão de Adicionar */
+#inAdicionar {
+    background: #fc6800;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#inAdicionar:hover {
+    background-color: #fd9d59;
+    /* Cor mais escura para Saída */
+}
+
+/* Botão de exclusão */
+button {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #cc0000;
+}
+
+/* Estilização dos totais */
+h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+#outEntrada {
+    color: green;
+}
+
+#outSaida {
+    color: red;
+}
+
+#outTotal {
+    color: white;
+    background: #4b7b3d;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Responsividade: ajusta os elementos em telas menores */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    table,
+    form {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    td,
+    th {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        padding: 4px 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    td,
+    th {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    button {
+        padding: 3px 6px;
+        font-size: 12px;
+    }
+
+    #outEntrada,
+    #outSaida,
+    #outTotal {
+        font-size: 14px;
+    }
+}
